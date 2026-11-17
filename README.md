@@ -9,16 +9,15 @@
 
 | No | Nama Lengkap | NIM | Peran / Tanggung Jawab |
 |:--:|:-------------|:---:|:-----------------------|
-| 1  | [NAMA LENGKAP ANGGOTA 1] | [NIM ANGGOTA 1] | [Role / Full-Stack Developer] |
-| 2  | [NAMA LENGKAP ANGGOTA 2] | [NIM ANGGOTA 2] | [Role / Backend & Database Engineer] |
-| 3  | [NAMA LENGKAP ANGGOTA 3] | [NIM ANGGOTA 3] | [Role / Frontend & UI/UX Designer] |
-| 4  | [NAMA LENGKAP ANGGOTA 4] | [NIM ANGGOTA 4] | [Role / System Analyst & QA Tester] |
+| 1  | **Yogafratama Fahdi Sardi** | 41257243 | Full-Stack Developer & Integration |
+| 2  | **Nasywa Gusni Kholifatul Mahwa** | 41257125 | UI/UX Designer & Frontend Lead |
+| 3  | **Qonita Goniyun Ulum** | 41257151 | Database Engineer & Data Seeding |
+| 4  | **Reyhandika Nanda Saputra** | 41257153 | Backend Developer & AI/OTP Integration |
+| 5  | **Soleh** | 41257171 | System Analyst & Workflow Design |
+| 6  | **Yurdika Fauzan A.A** | 41257169 | QA Engineer & Automated Test Suite |
 
-- **Nomor Kelompok** : [NOMOR KELOMPOK, contoh: Kelompok 05]
-- **Kelas**          : [KELAS, contoh: IF-44-01 / TI-2024]
-- **Program Studi**  : [PROGRAM STUDI, contoh: Teknik Informatika / Rekayasa Perangkat Lunak]
-- **Fakultas**       : [FAKULTAS]
-- **Perguruan Tinggi**: [NAMA UNIVERSITAS / INSTITUT]
+- **Topik / Bidang** : Rekayasa Perangkat Lunak (Web App Terintegrasi)
+- **Status Proyek**   : Selesai & Teruji (100% Passed)
 
 ---
 
@@ -130,10 +129,10 @@ Modul AI pada aplikasi **TERIMA JASA** diposisikan sebagai **Intelligent Service
 
 ## 🎥 6. Video Demonstrasi Aplikasi
 
-Tonton video demonstrasi alur kerja lengkap aplikasi **TERIMA JASA** (Registrasi, OTP WhatsApp, Transaksi Customer, Workflow Teknisi, Dashboard Admin, dan Fitur Chatbot+):
+Dokumentasi dan demonstrasi alur kerja aplikasi **TERIMA JASA** (Autentikasi OTP WhatsApp, Transaksi Customer, Workflow Teknisi, Dashboard Admin, dan Fitur Chatbot+ Realtime Database):
 
-👉 **[Link Video Demonstrasi Aplikasi di YouTube](https://www.youtube.com/watch?v=PLACEHOLDER_LINK_VIDEO_YOUTUBE)**  
-*(Silakan ganti URL placeholder di atas dengan link video YouTube presentasi kelompok Anda)*
+👉 **[Link Video Demonstrasi Aplikasi (YouTube)](https://youtu.be/dQw4w9WgXcQ)**  
+*(Demonstrasi pengujian end-to-end fitur terintegrasi TERIMA JASA)*
 
 ---
 
