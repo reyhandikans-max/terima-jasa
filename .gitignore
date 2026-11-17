@@ -1,0 +1,24 @@
+# Environment Variables
+.env
+.env.backup
+.env.*.local
+
+# Database backups & local scratch
+database/check_db.php
+database/create_otp_table.php
+
+# Composer / Dependencies
+/vendor/
+/node_modules/
+
+# Logs & Cache
+*.log
+storage/logs/*
+!storage/logs/.gitkeep
+.system_generated/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

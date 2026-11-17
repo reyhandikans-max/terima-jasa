@@ -1,0 +1,436 @@
+/* ========================================================
+   TERIMA JASA - CORE STYLESHEET
+   Design System, CSS Variables, Typography & Components
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --tj-primary: #1d4ed8;
+    --tj-primary-hover: #1e40af;
+    --tj-primary-light: #eff6ff;
+    --tj-secondary: #06b6d4;
+    --tj-accent: #10b981;
+    --tj-dark: #0f172a;
+    --tj-dark-hero: #090e17;
+    --tj-gray-50: #f8fafc;
+    --tj-gray-100: #f1f5f9;
+    --tj-gray-200: #e2e8f0;
+    --tj-gray-300: #cbd5e1;
+    --tj-gray-600: #475569;
+    --tj-gray-700: #334155;
+    --tj-gray-900: #0f172a;
+    
+    --tj-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --tj-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --tj-shadow-lg: 0 12px 28px -4px rgba(15, 23, 42, 0.08), 0 6px 14px -6px rgba(15, 23, 42, 0.05);
+    --tj-shadow-xl: 0 20px 35px -8px rgba(15, 23, 42, 0.12);
+
+    --tj-radius-sm: 8px;
+    --tj-radius-md: 14px;
+    --tj-radius-lg: 20px;
+    --tj-radius-xl: 28px;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--tj-gray-700);
+    background-color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--tj-gray-900);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* ========================================================
+   NAVBAR
+   ======================================================== */
+.tj-navbar {
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.3s ease;
+    padding: 0.85rem 0;
+}
+
+.tj-navbar .navbar-brand {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--tj-gray-900);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.tj-brand-badge {
+    background: linear-gradient(135deg, #1d4ed8, #06b6d4);
+    color: white;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+}
+
+.tj-nav-link {
+    font-weight: 500;
+    color: var(--tj-gray-600);
+    padding: 0.5rem 1rem !important;
+    border-radius: var(--tj-radius-sm);
+    transition: all 0.2s ease;
+}
+
+.tj-nav-link:hover, .tj-nav-link.active {
+    color: var(--tj-primary);
+    background-color: var(--tj-primary-light);
+}
+
+/* AI Badge Pill */
+.tj-ai-pill {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(29, 78, 216, 0.12));
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    color: #0369a1;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.tj-ai-pill .pulse-dot {
+    width: 7px;
+    height: 7px;
+    background-color: #06b6d4;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #06b6d4;
+    animation: pulseGlow 1.8s infinite;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(0.9); opacity: 0.7; }
+    50% { transform: scale(1.3); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.7; }
+}
+
+/* ========================================================
+   HERO SECTION
+   ======================================================== */
+.tj-hero {
+    position: relative;
+    background: radial-gradient(circle at 85% 15%, rgba(6, 182, 212, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 10% 85%, rgba(29, 78, 216, 0.12) 0%, transparent 40%),
+                linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    padding: 5rem 0 4.5rem;
+    overflow: hidden;
+}
+
+.tj-hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.18;
+    color: #0f172a;
+    margin-bottom: 1.35rem;
+}
+
+.tj-hero-title span.text-highlight {
+    background: linear-gradient(135deg, #1d4ed8 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tj-hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--tj-gray-600);
+    margin-bottom: 2.2rem;
+    max-width: 540px;
+}
+
+/* Search Bar Component */
+.tj-search-card {
+    background: #ffffff;
+    border: 1px solid var(--tj-gray-200);
+    border-radius: var(--tj-radius-lg);
+    box-shadow: var(--tj-shadow-xl);
+    padding: 0.75rem;
+}
+
+.tj-search-card .form-control,
+.tj-search-card .form-select {
+    border: none;
+    box-shadow: none;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.95rem;
+}
+
+.tj-search-card .form-control:focus,
+.tj-search-card .form-select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.tj-search-card .input-group-divider {
+    width: 1px;
+    background-color: var(--tj-gray-200);
+    margin: 0.5rem 0;
+}
+
+/* Hero Floating Badges */
+.tj-hero-image-wrapper {
+    position: relative;
+}
+
+.tj-floating-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: var(--tj-radius-md);
+    box-shadow: var(--tj-shadow-lg);
+    padding: 0.9rem 1.25rem;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.tj-floating-card:hover {
+    transform: translateY(-4px);
+}
+
+.tj-floating-card.top-right {
+    top: 5%;
+    right: -10px;
+}
+
+.tj-floating-card.bottom-left {
+    bottom: 8%;
+    left: -15px;
+}
+
+/* ========================================================
+   SECTION STYLING
+   ======================================================== */
+.tj-section {
+    padding: 5rem 0;
+}
+
+.tj-section-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+.tj-section-subtitle {
+    font-size: 1.05rem;
+    color: var(--tj-gray-600);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+/* ========================================================
+   CATEGORY CARDS
+   ======================================================== */
+.tj-category-card {
+    background: #ffffff;
+    border: 1px solid var(--tj-gray-200);
+    border-radius: var(--tj-radius-lg);
+    padding: 1.75rem;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.tj-category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--tj-shadow-lg);
+    border-color: #93c5fd;
+}
+
+.tj-cat-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: var(--tj-radius-md);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.tj-category-card:hover .tj-cat-icon {
+    transform: scale(1.1) rotate(4deg);
+}
+
+.tj-category-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.tj-category-card p {
+    font-size: 0.88rem;
+    color: var(--tj-gray-600);
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+/* ========================================================
+   WORKFLOW (CARA KERJA)
+   ======================================================== */
+.tj-step-card {
+    background: #ffffff;
+    border: 1px solid var(--tj-gray-200);
+    border-radius: var(--tj-radius-lg);
+    padding: 2rem 1.5rem;
+    position: relative;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.tj-step-card:hover {
+    border-color: var(--tj-primary);
+    box-shadow: var(--tj-shadow-md);
+}
+
+.tj-step-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--tj-gray-300);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.tj-step-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    margin-bottom: 1.2rem;
+}
+
+/* ========================================================
+   AI TEASER BANNER
+   ======================================================== */
+.tj-ai-banner {
+    background: linear-gradient(135deg, #090e17 0%, #0f172a 60%, #172554 100%);
+    border-radius: var(--tj-radius-xl);
+    padding: 3.5rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.4);
+}
+
+.tj-ai-banner::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* ========================================================
+   BUTTONS
+   ======================================================== */
+.btn-primary-tj {
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--tj-radius-md);
+    padding: 0.75rem 1.6rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.btn-primary-tj:hover {
+    background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+}
+
+.btn-outline-tj {
+    background: transparent;
+    border: 1.5px solid var(--tj-gray-300);
+    color: var(--tj-gray-700);
+    font-weight: 600;
+    border-radius: var(--tj-radius-md);
+    padding: 0.7rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-tj:hover {
+    border-color: var(--tj-primary);
+    color: var(--tj-primary);
+    background-color: var(--tj-primary-light);
+}
+
+/* ========================================================
+   FOOTER
+   ======================================================== */
+.tj-footer {
+    background-color: #0b1120;
+    color: #94a3b8;
+    padding: 4.5rem 0 2rem;
+    border-top: 1px solid #1e293b;
+}
+
+.tj-footer h5 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.tj-footer a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 0.92rem;
+}
+
+.tj-footer a:hover {
+    color: #38bdf8;
+}
+
+.tj-footer-bottom {
+    border-top: 1px solid #1e293b;
+    padding-top: 1.75rem;
+    margin-top: 3.5rem;
+    font-size: 0.88rem;
+}
+
+/* ========================================================
+   RESPONSIVE TWEAKS
+   ======================================================== */
+@media (max-width: 991.98px) {
+    .tj-hero-title {
+        font-size: 2.4rem;
+    }
+    .tj-floating-card {
+        display: none;
+    }
+    .tj-ai-banner {
+        padding: 2rem 1.5rem;
+    }
+}

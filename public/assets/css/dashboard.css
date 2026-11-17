@@ -1,0 +1,257 @@
+/* ========================================================
+   TERIMA JASA - DASHBOARD & AUTH STYLES
+   ======================================================== */
+
+.tj-auth-page {
+    min-height: 100vh;
+    background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+                #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+}
+
+.tj-auth-card {
+    background: #ffffff;
+    border: 1px solid var(--tj-gray-200);
+    border-radius: var(--tj-radius-xl);
+    box-shadow: var(--tj-shadow-xl);
+    overflow: hidden;
+    max-width: 960px;
+    width: 100%;
+}
+
+.tj-auth-sidebar {
+    background: linear-gradient(135deg, #090e17 0%, #172554 100%);
+    color: white;
+    padding: 3.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tj-role-badge-btn {
+    border: 1.5px solid var(--tj-gray-200);
+    border-radius: var(--tj-radius-md);
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--tj-gray-700);
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.tj-role-badge-btn:hover {
+    border-color: var(--tj-primary);
+    background: var(--tj-primary-light);
+    color: var(--tj-primary);
+}
+
+.tj-role-badge-btn.active {
+    border-color: var(--tj-primary);
+    background: #eff6ff;
+    color: var(--tj-primary);
+    box-shadow: 0 0 0 1px var(--tj-primary);
+}
+
+/* ========================================================
+   DASHBOARD LAYOUT
+   ======================================================== */
+.tj-dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+.tj-sidebar {
+    width: 270px;
+    background-color: #ffffff;
+    border-right: 1px solid var(--tj-gray-200);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.tj-sidebar-brand {
+    padding: 1.5rem 1.5rem;
+    border-bottom: 1px solid var(--tj-gray-200);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--tj-gray-900);
+}
+
+.tj-sidebar-nav {
+    padding: 1.25rem 0.85rem;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.tj-sidebar-heading {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    padding: 0.75rem 0.85rem 0.35rem;
+}
+
+.tj-sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.7rem 0.95rem;
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.92rem;
+    border-radius: var(--tj-radius-sm);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-bottom: 0.25rem;
+}
+
+.tj-sidebar-link:hover {
+    color: var(--tj-primary);
+    background-color: #eff6ff;
+}
+
+.tj-sidebar-link.active {
+    color: var(--tj-primary);
+    background-color: #eff6ff;
+    font-weight: 600;
+}
+
+.tj-sidebar-link i {
+    font-size: 1.2rem;
+}
+
+.tj-dashboard-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.tj-dashboard-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--tj-gray-200);
+    padding: 0.9rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tj-dashboard-content {
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+/* Role Banner Bar */
+.tj-role-switcher-bar {
+    background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%);
+    border: 1px solid #bfdbfe;
+    border-radius: var(--tj-radius-md);
+    padding: 0.9rem 1.25rem;
+    margin-bottom: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Stat Cards */
+.tj-stat-card {
+    background: #ffffff;
+    border: 1px solid var(--tj-gray-200);
+    border-radius: var(--tj-radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--tj-shadow-sm);
+    transition: all 0.25s ease;
+}
+
+.tj-stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--tj-shadow-md);
+}
+
+.tj-stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+}
+
+/* Table Card */
+.tj-card-table {
+    background: #ffffff;
+    border: 1px solid var(--tj-gray-200);
+    border-radius: var(--tj-radius-lg);
+    box-shadow: var(--tj-shadow-sm);
+    overflow: hidden;
+}
+
+.tj-card-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--tj-gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Mobile Sidebar Toggle */
+@media (max-width: 991.98px) {
+    .tj-sidebar {
+        position: fixed;
+        left: -270px;
+        top: 0;
+        bottom: 0;
+    }
+    .tj-sidebar.show {
+        left: 0;
+    }
+    .tj-dashboard-content {
+        padding: 1.25rem;
+    }
+}
+
+/* Print Styles for Reports */
+@media print {
+    .tj-sidebar,
+    .tj-dashboard-header,
+    .btn,
+    nav[aria-label="breadcrumb"],
+    .dropdown {
+        display: none !important;
+    }
+    .tj-dashboard-main {
+        margin-left: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+    .tj-dashboard-content {
+        padding: 0 !important;
+    }
+    .card {
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+    }
+}
+
